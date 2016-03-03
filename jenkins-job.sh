@@ -388,6 +388,12 @@ function delete_unnecessary_images {
             rm -rfv tmp-glibc/deploy/images/${BUILD_MACHINE}/modules-*
             rm -rfv tmp-glibc/deploy/images/${BUILD_MACHINE}/initramfs*
             ;;
+        raspberrypi2|raspberrypi3)
+            rm -rfv tmp-glibc/deploy/images/${BUILD_MACHINE}/luneos-image-*
+            rm -rfv tmp-glibc/deploy/images/${BUILD_MACHINE}/luneos-dev-image-*
+            rm -rfv tmp-glibc/deploy/images/${BUILD_MACHINE}/modules-*
+            rm -rfv tmp-glibc/deploy/images/${BUILD_MACHINE}/Image-*
+            ;;
         qemuarm|tenderloin|a500)
             # keep zImage and rootfs.tar.gz
             rm -rfv tmp-glibc/deploy/images/${BUILD_MACHINE}/initramfs*
